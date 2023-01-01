@@ -1,8 +1,29 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --accent: tomato;
+}
+
+body {
+  min-height: 100vh;
+  font: 1.2rem "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header {
+  padding: 0.8rem 1.2rem;
+  color: var(--secondary-color);
+  background-color: var(--accent);
+  text-align: center;
+}
+
+main {
+  margin: 3rem 2rem;
 }
