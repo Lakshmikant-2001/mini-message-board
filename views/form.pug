@@ -1,0 +1,9 @@
+extends layout 
+
+block content  
+  div#message-form-wrapper
+    form#message-form.form(action='', method='POST')
+      h3.form-title #{formTitle}
+      textarea(id='text', name='text', placeholder='text', cols='30', rows='10')
+      input(type='text', id='user', name='user', placeholder='author') 
+      button.btn(type="submit") Add

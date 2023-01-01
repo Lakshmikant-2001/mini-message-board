@@ -1,7 +1,9 @@
 extends layout
 
 block content
-  div.messages-wrapper
+  a(href='/new')
+    button.btn.form-open-btn add message
+  div#messages-wrapper
     each message in messages 
       div.message-box
         p.message-text #{message.text}
