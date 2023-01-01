@@ -9,4 +9,4 @@ block content
         p.message-text #{message.text}
         div.message-box-footer
           p.message-user #{message.user}
-          p.message-added #{message.added}
+          p.message-added #{moment(message.added).fromNow()}

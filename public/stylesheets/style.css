@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 textarea {
   resize: none;
 }
@@ -44,10 +48,11 @@ header {
 }
 
 main {
-  margin: 3rem 2rem;
+  margin: 2rem;
 }
 
 #messages-wrapper {
+  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -109,7 +114,7 @@ main {
 .form {
   display: flex;
   flex-direction: column;
-  width: min(90vh, 450px);
+  width: min(90vw, 450px);
 }
 
 .form > * {
@@ -119,6 +124,23 @@ main {
 
 .form-title {
   align-self: center;
-  opacity: .8;
+  opacity: 0.8;
   text-transform: uppercase;
+}
+
+.error-box {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  margin: 2rem;
+  padding: 0.5rem;
+  border: 2px solid var(--accent);
+  color: var(--secondary-color);
+  background-color: var(--light-accent);
+  border-radius: 0.5rem;
+}
+
+.error-box > li {
+  margin: 0.5rem;
+  font-size: 1rem;
 }
