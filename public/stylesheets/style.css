@@ -7,13 +7,16 @@
 }
 
 :root {
-  --primary-color: #000;
-  --secondary-color: #fff;
+  --primary-color: #333;
+  --secondary-color: #f8f9fa;
   --accent: tomato;
+  --light-color: #ccc;
+  --light-accent: rgb(247, 140, 122);
 }
 
 body {
   min-height: 100vh;
+  color: var(--primary-color);
   font: 1.2rem "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -26,4 +29,35 @@ header {
 
 main {
   margin: 3rem 2rem;
+}
+
+.messages-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.message-box {
+  margin: 1rem;
+  min-width: 300px;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--light-color);
+  border-left-width: 0px;
+  box-shadow: -4px 0px 0px var(--light-accent);
+}
+
+.message-box:hover {
+  box-shadow: -4px 0px 0px var(--accent), 0 2px 5px var(--light-color);
+}
+
+.message-text {
+  padding: 1.2rem 1rem;
+}
+
+.message-box-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-top: 2px solid var(--light-color);
 }
