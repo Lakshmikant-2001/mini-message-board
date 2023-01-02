@@ -1,28 +1,16 @@
 var express = require("express");
 const moment = require("moment");
 const { body, validationResult } = require("express-validator");
+const messages = require("../public/javascripts/messages");
 
 var router = express.Router();
 
-const messages = [
-  {
-    text: "Happy New year!",
-    user: "LK",
-    added: moment().startOf("year"),
-  },
-  {
-    text: "Hello World!",
-    user: "Charles",
-    added: moment().startOf("week"),
-  },
-];
-
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Mini Message Board", messages: messages });
+  res.render("index", { title: "Home", messages: messages });
 });
 
 router.get("/new", function (req, res, next) {
-  res.render("form", { title: "Mini Message Board", formTitle: "Add Message" });
+  res.render("form", { title: "New message", formTitle: "Add Message" });
 });
 
 router.post(
@@ -33,7 +21,7 @@ router.post(
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       res.render("form", {
-        title: "Mini Message Board",
+        title: "New message errors",
         formTitle: "Add Message",
         errors: errors.array(),
       });

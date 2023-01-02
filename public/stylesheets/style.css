@@ -97,8 +97,10 @@ main {
 .form-open-btn {
   display: block;
   margin-left: auto;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
+  padding: 0.35rem .75rem;
+  font-size: 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
 }
 
 #message-form-wrapper {
@@ -134,6 +136,7 @@ main {
   right: 0;
   margin: 2rem;
   padding: 0.5rem;
+  font-weight: bold;
   border: 2px solid var(--accent);
   color: var(--secondary-color);
   background-color: var(--light-accent);
